@@ -14,7 +14,6 @@ df['overweight'] = (df['weight'] / (df['height'] / 100) ** 2).apply(
 df['cholesterol'] = df['cholesterol'].apply(lambda x: 0 if x == 1 else 1)
 df['gluc']        = df['gluc'].apply(lambda x: 0 if x == 1 else 1)
 
-
 def draw_cat_plot():
     cat_features = ['cholesterol', 'gluc', 'smoke', 'alco', 'active', 'overweight']
 
@@ -51,7 +50,6 @@ def draw_cat_plot():
 
     fig.savefig('catplot.png')
     return fig
-
 
 def draw_heat_map():
     # Clean up

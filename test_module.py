@@ -4,7 +4,6 @@ import numpy as np
 import medical_data_visualizer
 from medical_data_visualizer import df
 
-
 class CatPlotTestCase(unittest.TestCase):
 
     def setUp(self):
@@ -31,7 +30,6 @@ class CatPlotTestCase(unittest.TestCase):
     def test_number_of_axes(self):
         self.assertEqual(len(self.fig.axes), 2)
 
-
 class HeatMapTestCase(unittest.TestCase):
 
     def setUp(self):
@@ -54,7 +52,6 @@ class HeatMapTestCase(unittest.TestCase):
     def test_heat_map_has_values(self):
         """Heatmap cells should contain annotation text."""
         self.assertGreater(len(self.ax.texts), 0)
-
 
 if __name__ == '__main__':
     unittest.main()
