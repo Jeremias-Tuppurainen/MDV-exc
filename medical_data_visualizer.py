@@ -16,10 +16,6 @@ df['gluc']        = df['gluc'].apply(lambda x: 0 if x == 1 else 1)
 
 
 def draw_cat_plot():
-    """
-    Bar chart showing the counts of 0/1 outcomes for each categorical
-    variable, split by whether the patient has cardiovascular disease.
-    """
     cat_features = ['cholesterol', 'gluc', 'smoke', 'alco', 'active', 'overweight']
 
     # Melt to long format
@@ -58,9 +54,6 @@ def draw_cat_plot():
 
 
 def draw_heat_map():
-    """
-    Pearson-correlation heat map after cleaning implausible rows.
-    """
     # Clean up
     df_heat = df[
         (df['ap_lo'] <= df['ap_hi'])
